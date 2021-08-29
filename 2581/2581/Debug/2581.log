@@ -1,0 +1,3 @@
+﻿  2581.c
+C:\Users\dusdj\git\algorithm\2581\2581\2581.c(8,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  2581.vcxproj -> C:\Users\dusdj\git\algorithm\2581\Debug\2581.exe
