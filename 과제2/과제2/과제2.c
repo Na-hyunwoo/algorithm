@@ -3,21 +3,30 @@
 작성한 알고리즘의 시간복잡도를 θ(Theta)-표기로 나타내라.*/
 
 #include <stdio.h>
-#include <stdlib.h>
+
 
 int main() {
-	int n;
-	int* arr;
+	int arr[7] = { 5,4,3,2,2,1,1 };
+	int temp;
 
-	scanf("%d", &n);
-
-	arr = (int*)malloc(sizeof(int) * n);
-
-	for (int i = 1; i <= n; i++) {
-		for (int j = 0; j < n; j++) {
-			if (i == arr[j]) {
-				break;
+	for (int i = 0; i < 6; i++) {
+		for (int j = 0; j < 6-i; j++) {
+			if (arr[j] > arr[j + 1]) {
+				temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
 			}
+		}
+	}
+
+	for (int i = 0; i < 7; i++) {
+		printf("%d", arr[i]);
+	}
+
+	for (int i = 0; i < 7; i++) {
+		if (arr[i] != i + 1) {
+			printf("번호가 빠졌습니다.\n");
+			break;
 		}
 	}
 
