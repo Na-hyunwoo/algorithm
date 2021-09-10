@@ -4,21 +4,26 @@
 int main() {
 	int n;
 	int x1, y1, r1, x2, y2, r2;
-	int d;
+	float d;
 	int dif;
 
+	
 	scanf("%d", &n);
 	for (int i = 0; i < n; i++) {
 		scanf("%d %d %d %d %d %d", &x1, &y1, &r1, &x2, &y2, &r2);
-		d = sqrt((x1-x2)* (x1 - x2)+ (y1 - y2) * (y1 - y2));
+
+
+		d = sqrt((x1 - x2)* (x1 - x2)+ (y1 - y2) * (y1 - y2));
+
 		
+
 		if (r1 > r2) {
 			dif = r1 - r2;
 		}
 		else {
 			dif = r2 - r1;
 		}
-
+		
 		if (d == 0) {
 			if (r1 == r2) {
 				printf("-1\n");
