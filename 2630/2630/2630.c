@@ -19,7 +19,7 @@ void check(int n,int x_s,int y_s) {
 		blue++;
 		return;
 	}
-	if (zero = true) {
+	if (zero == true) {
 		white++;
 		return;
 	}
@@ -41,14 +41,9 @@ int main() {
 		}
 	}
 
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			printf("%d ", array[i][j]);
-		}
-		printf("\n");
-	}
-
 	check(n,0,0);
 
 	printf("%d\n%d", white, blue);
+
+	return 0;
 }
