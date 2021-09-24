@@ -1,5 +1,4 @@
 ﻿  10815.c
-C:\Users\user\Desktop\개인공부\algorithm\10815(분할정복)\10815(분할정복)\10815.c(25,6): warning C4101: 'cnt' :참조되지 않은 지역 변수입니다.
-C:\Users\user\Desktop\개인공부\algorithm\10815(분할정복)\10815(분할정복)\10815.c(24,14): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
-C:\Users\user\Desktop\개인공부\algorithm\10815(분할정복)\10815(분할정복)\10815.c(14): error C4700: 초기화되지 않은 'n1' 지역 변수를 사용했습니다.
-C:\Users\user\Desktop\개인공부\algorithm\10815(분할정복)\10815(분할정복)\10815.c(15): error C4700: 초기화되지 않은 'n2' 지역 변수를 사용했습니다.
+C:\Users\user\Desktop\개인공부\algorithm\10815(분할정복)\10815(분할정복)\10815.c(28,6): warning C4101: 'cnt' :참조되지 않은 지역 변수입니다.
+C:\Users\user\Desktop\개인공부\algorithm\10815(분할정복)\10815(분할정복)\10815.c(27,14): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+  10815(분할정복).vcxproj -> C:\Users\user\Desktop\개인공부\algorithm\10815(분할정복)\Debug\10815(분할정복).exe
