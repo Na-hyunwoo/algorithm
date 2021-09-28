@@ -32,6 +32,10 @@ int upper(int *arr,int size, int num) {
 		}
 	}
 
+	if (end == size - 1 && num == arr[end]) {
+		end++;
+	}
+
 	return end;
 }
 
