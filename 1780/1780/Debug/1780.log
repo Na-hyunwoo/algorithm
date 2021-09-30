@@ -1,0 +1,5 @@
+﻿  1780.c
+C:\Users\user\Desktop\개인공부\algorithm\1780\1780\1780.c(30,12): warning C4098: 'division': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\user\Desktop\개인공부\algorithm\1780\1780\1780.c(34,12): warning C4098: 'division': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\user\Desktop\개인공부\algorithm\1780\1780\1780.c(38,12): warning C4098: 'division': 'void' 함수에서 값을 반환하고 있습니다.
+  1780.vcxproj -> C:\Users\user\Desktop\개인공부\algorithm\1780\Debug\1780.exe
