@@ -1,9 +1,71 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
-int minus=0,zero = 0, one = 0;
+int answer[3];
+int arr[2200][2200];
 
-void division(int **arr,int n,int x,int y) {
+bool allSameNumber(int x, int y, int n) {
+	int check = arr[x][y];
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (arr[x + i][y + i] != check) {
+				return false;
+			}
+		}
+	}
+	return true;
+}
+
+
+void makePaper(int x, int y, int n) {
+	if (allSameNumber(x, y, n)) {
+		int paperNum = arr[x][y];
+		answer[paperNum + 1]++;
+		return;
+	}
+
+	int div = n / 3;
+
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			makePaper(x + div * i, y + div * j, div);
+		}
+	}
+}
+
+
+int main() {
+	int n;
+	scanf("%d", &n);
+
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			scanf("%d", &arr[i][j]);
+		}
+	}
+
+	makePaper(0,0,n);
+
+	for (int i = 0; i < 3; i++) {
+		printf("%d\n", answer[i]);
+	}
+
+
+
+	return 0;
+}
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int minus = 0, zero = 0, one = 0;
+int arr[2200][2200];
+
+void division(int n, int x, int y) {
 	int check;
 	while (n > 1) {
 		check = arr[x][y];
@@ -13,15 +75,15 @@ void division(int **arr,int n,int x,int y) {
 					continue;
 				}
 				else {
-					division(arr, n / 3, 0, 0);
-					division(arr, n / 3, n / 3 + 1, 0);
-					division(arr, n / 3, 2 * n / 3 + 1, 0);
-					division(arr, n / 3, 0, n / 3 + 1);
-					division(arr, n / 3, n / 3 + 1, n / 3 + 1);
-					division(arr, n / 3, 2 * n / 3 + 1, n / 3 + 1);
-					division(arr, n / 3, 0, 2 * n / 3 + 1);
-					division(arr, n / 3, n / 3 + 1, 2 * n / 3 + 1);
-					division(arr, n / 3, 2 * n / 3 + 1, 2 * n / 3 + 1);
+					division(n / 3, 0, 0);
+					division(n / 3, n / 3 + 1, 0);
+					division(n / 3, 2 * n / 3 + 1, 0);
+					division(n / 3, 0, n / 3 + 1);
+					division(n / 3, n / 3 + 1, n / 3 + 1);
+					division(n / 3, 2 * n / 3 + 1, n / 3 + 1);
+					division(n / 3, 0, 2 * n / 3 + 1);
+					division(n / 3, n / 3 + 1, 2 * n / 3 + 1);
+					division(n / 3, 2 * n / 3 + 1, 2 * n / 3 + 1);
 				}
 			}
 		}
@@ -44,13 +106,10 @@ void division(int **arr,int n,int x,int y) {
 
 int main() {
 	int n;
-	int** arr;
+
 	scanf("%d", &n);
 
-	arr = (int**)malloc(sizeof(int*) * n);
-	for (int i = 0; i < n; i++) {
-		arr[i] = (int*)malloc(sizeof(int) * n);
-	}
+
 
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
@@ -65,7 +124,7 @@ int main() {
 		printf("\n");
 	}
 
-	division(arr, n,0,0);
+	division(n, 0, 0);
 
 	printf("%d\n%d\n%d", minus, one, zero);
 
@@ -74,3 +133,4 @@ int main() {
 
 	return 0;
 }
+*/
