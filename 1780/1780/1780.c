@@ -1,9 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <stdbool.h>
 
-int answer[3];
-int arr[2200][2200];
+int answer[3] = { 0, };
+int arr[2200][2200] = { 0, };
 
 bool allSameNumber(int x, int y, int n) {
 	int check = arr[x][y];
@@ -38,8 +37,8 @@ void makePaper(int x, int y, int n) {
 
 int main() {
 	int n;
-	scanf("%d", &n);
 
+	scanf("%d", &n);
 
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
@@ -52,8 +51,6 @@ int main() {
 	for (int i = 0; i < 3; i++) {
 		printf("%d\n", answer[i]);
 	}
-
-
 
 	return 0;
 }
