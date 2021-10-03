@@ -9,11 +9,13 @@ bool allSameNumber(int x, int y, int n) {
 
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
-			if (arr[x + i][y + i] != check) {
+			if (arr[x + i][y + j] != check) {
+				printf("false입니다.\n");
 				return false;
 			}
 		}
 	}
+	printf("true입니다.\n");
 	return true;
 }
 
