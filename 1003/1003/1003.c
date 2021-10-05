@@ -1,37 +1,25 @@
 #include <stdio.h>
 
-int count_0(int n) {
-	if (n == 0) {
-		return 1;
-	}
-	else if (n == 1) {
-		return 0;
-	}
-	else {
-		return count_0(n - 1) + count_0(n - 2);
-	}
-}
-
-int count_1(int n) {
-	if (n == 0) {
-		return 0;
-	}
-	else if (n == 1) {
-		return 1;
-	}
-	else {
-		return count_1(n - 1) + count_1(n - 2);
-	}
-}
 
 int main() {
 	int count,num;
+	int fibo[41][2];
 
 	scanf("%d", &count);
 
+	fibo[0][0] = 1;
+	fibo[0][1] = 0;
+	fibo[1][0] = 0;
+	fibo[1][1] = 1;
+
+	for (int i = 2; i <= 40; i++) {
+		fibo[i][0] = fibo[i-1][0] + fibo[i-2][0];
+		fibo[i][1] = fibo[i-1][1] + fibo[i-2][1];
+	}
+
 	for (int i = 0; i < count; i++) {
 		scanf("%d", &num);
-		printf("%d %d", count_0(num), count_1(num));
+		printf("%d %d\n", fibo[num][0],fibo[num][1]);
 	}
 
 
