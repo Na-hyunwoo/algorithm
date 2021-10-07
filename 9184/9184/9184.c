@@ -14,9 +14,11 @@ int w(int a, int b, int c) {
 		return w(20, 20, 20);
 	}
 	else if (a < b && b < c){
+		arr[a][b][c] = w(a, b, c - 1) + w(a, b - 1, c - 1) - w(a, b - 1, c);
 		return w(a, b, c - 1) + w(a, b - 1, c - 1) - w(a, b - 1, c);
 	}
 	else {
+		arr[a][b][c] = w(a - 1, b, c) + w(a - 1, b - 1, c) + w(a - 1, b, c - 1) - w(a - 1, b - 1, c - 1);
 		return w(a - 1, b, c) + w(a - 1, b - 1, c) + w(a - 1, b, c - 1) - w(a - 1, b - 1, c - 1);
 	}
 	
@@ -26,28 +28,14 @@ int w(int a, int b, int c) {
 int main() {
 
 	int a, b, c;
-	
-	for (int i = 1; i < 51; i++) {
-		for (int j = 1; j < 51; j++) {
-			for (int k = 1; k < 51; k++) {
 
-			}
-		}
-	}
 
 	while (1) {
 		scanf("%d %d %d", &a, &b, &c);
 		if (a == -1 && b == -1 && c == -1)break;
 		printf("w(%d, %d, %d) = %d\n",a,b,c,w(a, b, c));
-		arr[a][b][c] = w(a, b, c);
-		
+
 	}
-
-
-
-
-
-
 
 	return 0;
 }
