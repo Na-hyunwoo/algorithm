@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int arr[51][51][51] = { 0, };
+int arr[21][21][21] = { 0, };
 
 int w(int a, int b, int c) {
 	
@@ -15,11 +15,11 @@ int w(int a, int b, int c) {
 	}
 	else if (a < b && b < c){
 		arr[a][b][c] = w(a, b, c - 1) + w(a, b - 1, c - 1) - w(a, b - 1, c);
-		return w(a, b, c - 1) + w(a, b - 1, c - 1) - w(a, b - 1, c);
+		return arr[a][b][c];
 	}
 	else {
 		arr[a][b][c] = w(a - 1, b, c) + w(a - 1, b - 1, c) + w(a - 1, b, c - 1) - w(a - 1, b - 1, c - 1);
-		return w(a - 1, b, c) + w(a - 1, b - 1, c) + w(a - 1, b, c - 1) - w(a - 1, b - 1, c - 1);
+		return arr[a][b][c];
 	}
 	
 }
@@ -29,12 +29,10 @@ int main() {
 
 	int a, b, c;
 
-
 	while (1) {
 		scanf("%d %d %d", &a, &b, &c);
-		if (a == -1 && b == -1 && c == -1)break;
+		if (a == -1 && b == -1 && c == -1) break;
 		printf("w(%d, %d, %d) = %d\n",a,b,c,w(a, b, c));
-
 	}
 
 	return 0;
