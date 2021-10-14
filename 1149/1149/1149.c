@@ -13,23 +13,27 @@ int main() {
 		}
 	}
 
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < 3; j++) {
-			printf("%d ", arr[i][j]);
-		}
-		printf("\n");
-	}
 
 
 
 	if (arr[0][0] > arr[0][1]) {
-		pivot = 0;
-	}
-	else {
+		min = arr[0][1];
 		pivot = 1;
 	}
+	else {
+		min = arr[0][0];
+		pivot = 0;
+	}
+	if (min > arr[0][2]) {
+		pivot = 2;
+		min = arr[0][2];
+	}
+	sum += min;
 
-	for (int i = 0; i < n; i++) {
+	printf("pivot:%d\n",pivot );
+	
+
+	for (int i = 1; i < n; i++) {
 		if (pivot == 0) {
 			min = arr[i][1];
 		}
@@ -45,12 +49,12 @@ int main() {
 				if (arr[i][j] < min) {
 					min = arr[i][j];
 					pivot = j;
+					printf("pivot:%d\n", pivot);
 					
 				}
 			}
 		}
 		sum += min;
-		printf("sum:%d\n", sum);
 	}
 
 	printf("%d", sum);
