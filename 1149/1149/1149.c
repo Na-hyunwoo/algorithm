@@ -30,7 +30,7 @@ int main() {
 	}
 	sum += min;
 
-	printf("pivot:%d\n",pivot );
+
 	
 
 	for (int i = 1; i < n; i++) {
@@ -48,12 +48,22 @@ int main() {
 			if (j!=pivot) {
 				if (arr[i][j] < min) {
 					min = arr[i][j];
-					pivot = j;
-					printf("pivot:%d\n", pivot);
+					
 					
 				}
 			}
 		}
+		if (min == arr[i][0]) {
+			pivot = 0;
+		}
+		else if (min == arr[i][1]) {
+			pivot = 1;
+		}
+		else {
+			pivot = 2;
+		}
+
+
 		sum += min;
 	}
 
