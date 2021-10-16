@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 int main() {
-	int n,min,sum=0,pivot;
+	int n,sum=0,pivot;
 	int arr[1000][3] = { 0, };
+	int min[1000] = { 0, };
 
 	scanf("%d", &n);
 
@@ -17,46 +18,50 @@ int main() {
 
 
 	if (arr[0][0] > arr[0][1]) {
-		min = arr[0][1];
+		min[0] = arr[0][1];
 		pivot = 1;
 	}
 	else {
-		min = arr[0][0];
+		min[0] = arr[0][0];
 		pivot = 0;
 	}
-	if (min > arr[0][2]) {
+
+	if (min[0] > arr[0][2]) {
 		pivot = 2;
-		min = arr[0][2];
+		min[0] = arr[0][2];
 	}
-	sum += min;
+
+	printf("min[0]:%d\n", min[0]);
+
+	sum += min[0];
 
 
 	
 
 	for (int i = 1; i < n; i++) {
 		if (pivot == 0) {
-			min = arr[i][1];
+			min[i] = arr[i][1];
 		}
 		else if (pivot == 1) {
-			min = arr[i][0];
+			min[i] = arr[i][0];
 		}
 		else {
-			min = arr[i][0];
+			min[i] = arr[i][0];
 		}
 		
 		for (int j = 0	; j < 3; j++) {
 			if (j!=pivot) {
 				if (arr[i][j] < min) {
-					min = arr[i][j];
+					min[i] = arr[i][j];
 					
 					
 				}
 			}
 		}
-		if (min == arr[i][0]) {
+		if (min[i] == arr[i][0]) {
 			pivot = 0;
 		}
-		else if (min == arr[i][1]) {
+		else if (min[i] == arr[i][1]) {
 			pivot = 1;
 		}
 		else {
@@ -64,7 +69,8 @@ int main() {
 		}
 
 
-		sum += min;
+		printf("min[%d]:%d\n", i, min[i]);
+		sum += min[i];
 	}
 
 	printf("%d", sum);
