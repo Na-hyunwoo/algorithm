@@ -51,7 +51,7 @@ int main() {
 		
 		for (int j = 0	; j < 3; j++) {
 			if (j!=pivot) {
-				if (arr[i][j] < min) {
+				if (arr[i][j] <= min[i]) {
 					min[i] = arr[i][j];
 					
 					

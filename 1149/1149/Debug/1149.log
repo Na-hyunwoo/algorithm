@@ -1,3 +1,2 @@
 ﻿  1149.c
-C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1149\1149\1149.c(54,24): warning C4047: '<': 'int'의 간접 참조 수준이 'int [1000]'과(와) 다릅니다.
   1149.vcxproj -> C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1149\Debug\1149.exe
