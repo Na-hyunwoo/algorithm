@@ -1,81 +1,33 @@
 #include <stdio.h>
 
+//occidere라는 분의 블로그에서 내용을 찾았는데, 코드가 너무 깔끔하다. 더이상 깔끔할 수 가 없다.  
+
+int Min(int a, int b) {
+	if (a > b) return b;
+	else return a;
+}
+
 int main() {
-	int n,sum=0,pivot;
-	int arr[1000][3] = { 0, };
-	int min[1000] = { 0, };
+	int n;
+	int d[1001][3] = { 0, };
+	int a[1001][3] = { 0, };
 
 	scanf("%d", &n);
 
 
-	for (int i = 0; i < n; i++) {
+	for (int i = 1; i <= n; i++) {
 		for (int j = 0; j < 3; j++) {
-			scanf("%d", &arr[i][j]);
+			scanf("%d", &a[i][j]);
 		}
 	}
 
-
-
-
-	if (arr[0][0] > arr[0][1]) {
-		min[0] = arr[0][1];
-		pivot = 1;
-	}
-	else {
-		min[0] = arr[0][0];
-		pivot = 0;
+	for (int i = 1; i <= n; i++) {
+		d[i][0] = Min( d[i - 1][1], d[i - 1][2]) + a[i][0];
+		d[i][1] = Min(d[i - 1][0], d[i - 1][2]) + a[i][1];
+		d[i][2] = Min(d[i - 1][0], d[i - 1][1]) + a[i][2];
 	}
 
-	if (min[0] > arr[0][2]) {
-		pivot = 2;
-		min[0] = arr[0][2];
-	}
-
-	printf("min[0]:%d\n", min[0]);
-
-	sum += min[0];
-
-
+	printf("%d", Min(Min(d[n][0], d[n][1]), d[n][2]));
 	
-
-	for (int i = 1; i < n; i++) {
-		if (pivot == 0) {
-			min[i] = arr[i][1];
-		}
-		else if (pivot == 1) {
-			min[i] = arr[i][0];
-		}
-		else {
-			min[i] = arr[i][0];
-		}
-		
-		for (int j = 0	; j < 3; j++) {
-			if (j!=pivot) {
-				if (arr[i][j] <= min[i]) {
-					min[i] = arr[i][j];
-					
-					
-				}
-			}
-		}
-		if (min[i] == arr[i][0]) {
-			pivot = 0;
-		}
-		else if (min[i] == arr[i][1]) {
-			pivot = 1;
-		}
-		else {
-			pivot = 2;
-		}
-
-
-		printf("min[%d]:%d\n", i, min[i]);
-		sum += min[i];
-	}
-
-	printf("%d", sum);
-	
-
-
 	return 0;
 }
