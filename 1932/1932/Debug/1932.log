@@ -1,3 +1,2 @@
 ﻿  1932.c
-C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1932\1932\1932.c(20,10): warning C4477: 'scanf' : 서식 문자열 '%d'에 'int *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
   1932.vcxproj -> C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1932\Debug\1932.exe
