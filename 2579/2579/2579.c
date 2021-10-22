@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//연속된 세 개의 계단을 이어서 밟으면 안되는 점을 놓치면 안됩니다. 
+//연속된 세 개의 계단을 이어서 밟으면 안되는 점을 놓치면 안됩니다. 이걸 어떻게 구현할까?
 
 int Max(int a, int b) {
 	if (a > b) return a;
@@ -19,8 +19,13 @@ int main() {
 		scanf("%d", &F[i]);
 	}
 
-	for (int i = 1; i <= n; i++) {
-		sum[i] = Max((sum[i - 1] + F[i]), (sum[i - 2], F[i]));
+	sum[1] = F[1];
+	sum[2] = F[1] + F[2];
+	sum[3] = Max(F[3] + F[2], F[3] + F[1]);
+
+	for (int i = 4; i <= n; i++) {
+		sum[i] = Max((sum[i - 3] + F[i-2]+F[i]), (sum[i - 3]+ F[i-1]+F[i]));
+		printf("%d ", sum[i]);
 	}
 
 	printf("%d", sum[n]);
