@@ -24,8 +24,7 @@ int main() {
 	sum[3] = Max(F[3] + F[2], F[3] + F[1]);
 
 	for (int i = 4; i <= n; i++) {
-		sum[i] = Max((sum[i - 3] + F[i-2]+F[i]), (sum[i - 3]+ F[i-1]+F[i]));
-		printf("%d ", sum[i]);
+		sum[i] = Max((sum[i - 2] + F[i]), (sum[i - 3] + F[i-1] + F[i]));
 	}
 
 	printf("%d", sum[n]);
