@@ -1,5 +1,7 @@
 ﻿  1931.c
-C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1931\1931\1931.c(47,15): warning C4047: '=': 'unsigned int'의 간접 참조 수준이 'int *'과(와) 다릅니다.
-C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1931\1931\1931.c(50,20): warning C4047: '<': 'unsigned int'의 간접 참조 수준이 'int *'과(와) 다릅니다.
-C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1931\1931\1931.c(52,19): warning C4047: '=': 'unsigned int'의 간접 참조 수준이 'int *'과(와) 다릅니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1931\1931\1931.c(43,42): warning C4090: '함수': 'const' 한정자가 서로 다릅니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1931\1931\1931.c(43,42): warning C4028: 정식 매개 변수 1이(가) 선언과 다릅니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1931\1931\1931.c(43,42): warning C4028: 정식 매개 변수 2이(가) 선언과 다릅니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1931\1931\1931.c(55,12): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1931\1931\1931.c(14,15): warning C4101: 'swap' :참조되지 않은 지역 변수입니다.
   1931.vcxproj -> C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1931\Debug\1931.exe
