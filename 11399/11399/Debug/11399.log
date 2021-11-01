@@ -1,0 +1,5 @@
+﻿  11399.c
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\11399\11399\11399.c(23,36): warning C4090: '함수': 'const' 한정자가 서로 다릅니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\11399\11399\11399.c(23,36): warning C4028: 정식 매개 변수 1이(가) 선언과 다릅니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\11399\11399\11399.c(23,36): warning C4028: 정식 매개 변수 2이(가) 선언과 다릅니다.
+  11399.vcxproj -> C:\Users\user\OneDrive\Desktop\개인공부\algorithm\11399\Debug\11399.exe
