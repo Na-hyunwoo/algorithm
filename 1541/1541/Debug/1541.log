@@ -1,9 +1,11 @@
 ﻿  1541.c
 C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(22,6): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
 C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(27,18): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(41,17): warning C4133: '함수': 'int [50]'과(와) 'const char *' 사이의 형식이 호환되지 않습니다.
-C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(42,34): warning C4133: '함수': 'int [50]'과(와) 'const char *' 사이의 형식이 호환되지 않습니다.
-C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(42,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(50,33): warning C4133: '함수': 'int [50]'과(와) 'const char *' 사이의 형식이 호환되지 않습니다.
-C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(50,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(34,33): warning C4133: '함수': 'int [50]'과(와) 'const char *' 사이의 형식이 호환되지 않습니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(34,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(45,17): warning C4133: '함수': 'int [50]'과(와) 'const char *' 사이의 형식이 호환되지 않습니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(46,34): warning C4133: '함수': 'int [50]'과(와) 'const char *' 사이의 형식이 호환되지 않습니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(46,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(57,33): warning C4133: '함수': 'int [50]'과(와) 'const char *' 사이의 형식이 호환되지 않습니다.
+C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\1541\1541.c(57,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   1541.vcxproj -> C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1541\Debug\1541.exe
