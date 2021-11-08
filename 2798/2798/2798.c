@@ -3,13 +3,14 @@
 
 
 //틀렸다는데 뭐가 틀렸다고 하는골까아. 아마 끝 값들을 넣으면 해결될 것 같다. 
+//합이 m을 넘지 않아야 한다는 조건이 있습니다. 굳굳.
 int main() {
 	int n, m;
 	int* sum;
 	int* temp;
 	int index=0;
 	int min;
-	int result;
+	int result=0;
 	int* arr;
 
 
@@ -35,14 +36,13 @@ int main() {
 	for (int i = 0; i < index; i++) {
 		temp[i] = sum[i];
 	}
-
 	
 	for (int i = 0; i < index; i++) {
 		if ((m - sum[i]) >= 0) {
 			sum[i] = m - sum[i];
 		}
 		else {
-			sum[i] = sum[i] - m;
+			sum[i] = 10000;
 		}
 	}
 
