@@ -1,3 +1,2 @@
 ﻿  1018.c
-C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1018\1018\1018.c(19,41): warning C4047: '=': 'char **'의 간접 참조 수준이 'char *'과(와) 다릅니다.
   1018.vcxproj -> C:\Users\user\OneDrive\Desktop\개인공부\algorithm\1018\Debug\1018.exe
